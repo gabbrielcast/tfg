@@ -1,0 +1,59 @@
+@function getGap($clave) {
+  @return nth($list: $gap-values, $n: $clave);
+}
+
+@function getGapKeys($array) {
+  $claves: ();
+
+  @for $clave from 1 to length($array) + 1 {
+    $claves: append($claves, $clave);
+  }
+  @return $claves;
+}
+
+@function getFontSize($clave) {
+  $sizes: map-get(
+    $map: $text,
+    $key: "font-sizes",
+  );
+  $size: nth($sizes, $clave);
+
+  @return $size;
+}
+
+@function getFontKeys($array) {
+  $sizes: map-get(
+    $map: $array,
+    $key: "font-sizes",
+  );
+  $claves: ();
+
+  @for $i from 1 to length($sizes) + 1 {
+    $claves: append(
+      $list: $claves,
+      $val: $i,
+    );
+  }
+
+  @return $claves;
+}
+
+@function getFontSize2($tamanyo) {
+  @return pow(1.2, $tamanyo) * 16;
+}
+
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  } @else if $exponent < 0 {
+    @for $i from 1 through -$exponent {
+      $value: calc($value / $number);
+    }
+  }
+
+  @return calc(round($value * 10000) / 10000);
+}
