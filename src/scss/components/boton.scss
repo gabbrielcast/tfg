@@ -1,0 +1,33 @@
+@import '@scss/variables';
+
+.boton {
+    padding: 10px;
+
+    &-search {
+        background-color: $bk-green;
+        // color: white;
+    }
+
+    &-nav {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        border: none;
+        border-radius: 8px;
+        padding: 8px;
+        background-color: $bk-principal;
+        color: white;
+
+        span {
+            font-size: 16px;
+        }
+        .login {
+            font-size: 20px;
+        }
+        &--secundario {
+            color: black;
+            background: transparent;
+            border: 1px solid $bk-principal;
+        }
+    }
+}

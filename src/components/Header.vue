@@ -9,13 +9,36 @@
         </div>
 
         <div class="btns">
-            <button class="navbar-otro">
+            <button class="boton-nav boton-nav--secundario">
                 <i class="login bi bi-person-add"></i>
                 <span>Otro</span>
             </button>
-            <button class="navbar-acceder">
+            <button class="boton-nav">
                 <i class="login bi bi-person-add"></i>
                 <span>LogIn</span>
+            </button>
+        </div>
+    </div>
+    <div class="hero"></div>
+    <div class="search">
+        <div class="search-info">
+            <h2>Encuentra Tu Sitio</h2>
+            <ul class="search-lista">
+                <li>Comprar</li>
+                <li>Alquilar</li>
+                <li>Todas</li>
+            </ul>
+        </div>
+        <div class="inputs">
+            <select name="" id="">
+                <option value="vivienda">Vivienda</option>
+                <option value="vivienda">Habitación</option>
+                <option value="vivienda">Oficina</option>
+            </select>
+
+            <button class="boton boton-search">
+                <span>Buscar</span>
+                <i class="bi bi-search"></i>
             </button>
         </div>
     </div>
@@ -41,4 +64,5 @@ let isMovil = computed(() => {
 
 <style lang="scss" scoped>
 @import '@/scss/components/header.scss';
+// @import '@/scss/components/boton.scss';
 </style>

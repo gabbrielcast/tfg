@@ -1,21 +1,23 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
+    "files": [],
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        },
+        {
+            "path": "./tsconfig.app.json"
+        },
+        {
+            "path": "./tsconfig.vitest.json"
+        }
+    ],
+    "compilerOptions": {
+        "paths": {
+            "@/*": ["./src/*"],
+            "@firebaseConfig/*": ["./src/utils/firebase.js"],
+            "@scss/*": ["./src/scss/*"],
+            "@scss/components/*": ["./src/scss/components/*"],
+            "@scss/variables/*": ["./src/scss/utilities/variables.scss"]
+        }
     }
-  ],
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"],
-      "@firebaseConfig/*": ["./src/utils/firebase.js"],
-    }
-  }
-
 }

@@ -1,10 +1,12 @@
+@import '@scss/variables';
+@import '@/scss/components/boton.scss';
+
 .navbar {
-    background-color: rgb(38, 67, 140);
-    color: white;
+    color: $bk-principal;
     // height: 200px;
     display: flex;
     align-items: center;
-    padding: 15px 10px;
+    padding: 10px;
     justify-content: space-between;
     box-shadow: 0px 12px 7px -8px rgba(179, 179, 179, 1);
     // position: sticky;
@@ -19,9 +21,6 @@
         filter: invert(1) brightness(2);
         display: none;
     }
-    .login {
-        font-size: 25px;
-    }
 
     .name {
         font-family: 'Cascadia Code';
@@ -32,19 +31,94 @@
         gap: 10px;
     }
 
-    button {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        border: none;
-        border-radius: 8px;
-        padding: 8px;
+    // button {
+    //     display: flex;
+    //     gap: 8px;
+    //     align-items: center;
+    //     border: none;
+    //     border-radius: 8px;
+    //     padding: 8px;
 
-        span {
-            font-size: 16px;
+    //     span {
+    //         font-size: 16px;
+    //     }
+    //     .login {
+    //         font-size: 20px;
+    //     }
+    // }
+}
+
+.hero {
+    height: 230px;
+    background-image: url('../../assets/img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.7);
+}
+
+.search {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: absolute;
+    width: 100%;
+    top: 280px;
+    height: 250px;
+    background: linear-gradient(220.55deg, $bk-purple-1 0%, $bk-purple-2 100%);
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+
+    .search-lista {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        list-style: none;
+        padding: 0px;
+    }
+
+    .search-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h2 {
+            font-size: 24px;
+            text-align: center;
         }
-        .login {
-            font-size: 20px;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        select,
+        button {
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+        }
+        select {
+        }
+
+        button {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            .bi-search {
+                font-size: 20px;
+            }
+
+            span {
+                font-size: 20px;
+            }
         }
     }
 }

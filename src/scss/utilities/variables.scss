@@ -1,14 +1,19 @@
 $gap-values: (5px, 8px, 12px, 16px, 20px, 24px, 32px, 48px, 64px);
 
 $text: (
-  "font-sizes": (
-    8,
-    12,
-    16,
-    20,
-    24,
-    32,
-    48,
-    64,
-  ),
+    'font-sizes': (
+        8,
+        12,
+        16,
+        20,
+        24,
+        32,
+        48,
+        64
+    )
 );
+
+$bk-principal: #303ab2;
+$bk-green: #60e550;
+$bk-purple-1: #a531dc;
+$bk-purple-2: #4300b1;
