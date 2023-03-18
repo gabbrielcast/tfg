@@ -1,30 +1,44 @@
 <template>
-  <div class="navbar">
-    <div class="menu">
-      <i class="bi bi-list"></i>
-      <img src="../assets/img/logo.png" alt="">
+    <div class="navbar">
+        <i v-if="isMovil" class="bi bi-list"></i>
+        <!-- <img src="../assets/img/logo.png" alt="" /> -->
+
+        <div>
+            <h1 v-if="isMovil" class="name">BH</h1>
+            <h1 v-else class="name">ByHouse</h1>
+        </div>
+
+        <div class="btns">
+            <button class="navbar-otro">
+                <i class="login bi bi-person-add"></i>
+                <span>Otro</span>
+            </button>
+            <button class="navbar-acceder">
+                <i class="login bi bi-person-add"></i>
+                <span>LogIn</span>
+            </button>
+        </div>
     </div>
-    <h1>ByHouse</h1>
-    <!-- <div class="buscador">
-      <input type="text">
-      <i class="bi bi-search"></i>
-    </div>
-    <ul class="navbar__lista">
-      <li>Inicio</li>
-      <li>Viviendas</li>
-    </ul> -->
-    <i class="login bi bi-person-add"></i>
-  </div>
 </template>
 
-<script lang="ts">
-export default {
+<script setup lang="ts">
+import { ref, computed, onMounted } from 'vue'
 
+let width = ref(screen.width)
+
+onMounted(() => {
+    window.addEventListener('resize', chekIsMobile)
+})
+let chekIsMobile = () => {
+    width.value = screen.width
+    return width.value <= 425
 }
+
+let isMovil = computed(() => {
+    return chekIsMobile()
+})
 </script>
 
 <style lang="scss" scoped>
-@import "@/scss/components/header.scss";
-
+@import '@/scss/components/header.scss';
 </style>
-
