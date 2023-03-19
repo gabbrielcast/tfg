@@ -5,13 +5,13 @@ import { onMounted, defineComponent } from 'vue'
 import { DB } from '@firebaseConfig'
 import { collection, getDocs } from 'firebase/firestore'
 
-onMounted(async () => {
-    const querySnapshot = await getDocs(collection(DB, 'vivienda'))
-    querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, ' => ', doc.data())
-    })
-})
+// onMounted(async () => {
+//     const querySnapshot = await getDocs(collection(DB, 'vivienda'))
+//     querySnapshot.forEach((doc) => {
+//         // doc.data() is never undefined for query doc snapshots
+//         console.log(doc.id, ' => ', doc.data())
+//     })
+// })
 </script>
 
 <template>

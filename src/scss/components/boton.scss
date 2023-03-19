@@ -1,11 +1,29 @@
 @import '@scss/variables';
 
-.boton {
+.boton,
+button {
     padding: 10px;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 30px;
+    font-size: 20px;
+    background-color: $boton-default;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        filter: brightness(1.5);
+        transform: scale(1.08);
+    }
 
     &-search {
         background-color: $bk-green;
         // color: white;
+        &:hover {
+            filter: brightness(1.5);
+            transform: scale(1);
+        }
     }
 
     &-nav {
@@ -17,6 +35,11 @@
         padding: 8px;
         background-color: $bk-principal;
         color: white;
+
+        &:hover {
+            filter: brightness(1.5);
+            transform: scale(1);
+        }
 
         span {
             font-size: 16px;

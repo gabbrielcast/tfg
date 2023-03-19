@@ -15,6 +15,7 @@
         "paths": {
             "@/*": ["./src/*"],
             "@firebaseConfig/*": ["./src/utils/firebase.js"],
+            "@components/*": ["./src/components/*"],
             "@scss/*": ["./src/scss/*"],
             "@scss/components/*": ["./src/scss/components/*"],
             "@scss/variables/*": ["./src/scss/utilities/variables.scss"]

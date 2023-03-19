@@ -1,8 +1,12 @@
 .l-grid {
-  display: grid;
-  gap: 30px;
+    display: grid;
+    gap: 30px;
 
-  &__area-cards {
-    grid-template-columns: repeat(auto-fit, 280px);
-  }
+    &--area-cards {
+        grid-template-columns: repeat(auto-fit, 320px);
+    }
+
+    &--place-center {
+        place-content: center;
+    }
 }

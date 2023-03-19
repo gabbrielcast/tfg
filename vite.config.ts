@@ -12,6 +12,7 @@ export default defineConfig({
             '@firebaseConfig': fileURLToPath(new URL('./src/utils/firebase.js', import.meta.url)),
             '@scss/': fileURLToPath(new URL('./src/scss/', import.meta.url)),
             '@scss/components/': fileURLToPath(new URL('./src/scss/components/', import.meta.url)),
+            '@components': fileURLToPath(new URL('./src/components/', import.meta.url)),
             '@scss/variables': fileURLToPath(
                 new URL('./src/scss/utilities/variables.scss', import.meta.url)
             )
